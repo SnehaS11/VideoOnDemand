@@ -36,7 +36,7 @@ const useStyles = makeStyles(theme => ({
     card: {
         display: 'flex',
         alignItems: 'center',
-        width: 500
+        width: 550,
     }
 }))
 

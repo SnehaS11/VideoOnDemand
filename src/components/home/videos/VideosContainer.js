@@ -18,7 +18,7 @@ export class VideosContainer extends Component {
         relatedVideos: [],
         openVideo: false,
         selectedSpeakers: [],
-        selectedTags: []
+        selectedTags: [],
     }
 
     componentDidMount() {
@@ -83,28 +83,25 @@ export class VideosContainer extends Component {
     }
 
     onClickVideo = (video) => {
-        //Fetch other videos by the speaker
-        let selectedSpeakers = video.speakers.map(s => s._id);
-        let selectedTags = video.tags.map(t => t);
-
         this.setState({
             selectedVideo: video,
-            openVideo: true,
-            selectedSpeakers,
-            selectedTags
+            openVideo: true
         }, () => {
             this.fetchMoreVideos();
         })
     }
 
     fetchMoreVideos = () => {
-        const { selectedVideo, selectedSpeakers, selectedTags } = this.state;
+        const { selectedVideo } = this.state;
+        let tags = selectedVideo.tags.map(t => t),
+            speakers = selectedVideo.speakers.map(s => s._id);
+
         let calls = [];
-        if(selectedSpeakers) {
-            calls.push(fetchVideos(`speakers=${selectedSpeakers.join(',')}`))
+        if(speakers) {
+            calls.push(fetchVideos(`speakers=${speakers.join(',')}`))
         }
-        if(selectedTags) {
-            calls.push(fetchVideos(`tags=${selectedTags.join(',')}`));
+        if(tags) {
+            calls.push(fetchVideos(`tags=${tags.join(',')}`));
         }
 
         Promise.all(calls)
