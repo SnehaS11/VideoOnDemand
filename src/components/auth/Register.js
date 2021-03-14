@@ -77,6 +77,11 @@ export default function Register(props) {
                 margin="dense"
                 className={classes.textField}
                 variant="outlined"
+                onKeyPress={e => {
+                    if(e.key === "Enter") {
+                        onRegister();
+                    }
+                  }}
             />
 
             {errors && errors.map(err => (

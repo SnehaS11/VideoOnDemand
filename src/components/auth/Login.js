@@ -61,6 +61,11 @@ export default function Login(props) {
         margin="dense"
         className={classes.textField}
         variant="outlined"
+        onKeyPress={e => {
+          if(e.key === "Enter") {
+            onLogin();
+          }
+        }}
       />
 
       {errors && errors.map(err => (
