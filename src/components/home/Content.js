@@ -2,6 +2,7 @@ import React from 'react'
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
+import Grid from '@material-ui/core/Grid';
 import Rectangle from '../../assets/images/Rectangle.png';
 
 function Content() {
@@ -9,8 +10,8 @@ function Content() {
 
     return (
         <div>
-            <div className={classes.root}>
-                <div className={classes.left}>
+            <Grid container className={classes.root}>
+                <Grid item xs={12} sm={6} className={classes.left}>
                     <Typography className={classes.leftText}>
                         Diagnosis &amp; Monitoring of airway diseases in the Era of Social Distancing
                     </Typography>
@@ -22,16 +23,16 @@ function Content() {
                     >
                         Watch now
                     </Button>
-                </div>
+                </Grid>
 
-                <div>
+                <Grid item xs={12} sm={6}>
                     <div className={classes.right}>
                         <img src={Rectangle} alt="rectangle" className={classes.rectangle} />
                         <Typography className={classes.rightText}><i>A unique knowledge sharing experience</i></Typography>
                     </div>
                     <i className={classes.inspire}>inspire</i>
-                </div>
-            </div>
+                </Grid>
+            </Grid>
         </div>
     )
 }
@@ -80,6 +81,24 @@ const useStyles = makeStyles((theme) => ({
         alignSelf: 'center',
         fontSize: 50,
         fontFamily: 'fantasy'
+    },
+    [theme.breakpoints.down('sm')]: {
+        root: {
+            width: '100%'
+        },
+        left: {
+            alignItems: 'center'
+        },
+        rightText: {
+            width: 'fit-content'
+        },
+        rectangle: {
+            transform: 'scale(0.6)'
+        },
+        rightText: {
+            position: 'relative',
+            right: 50
+        }
     }
 }))
 

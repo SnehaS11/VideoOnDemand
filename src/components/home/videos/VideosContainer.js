@@ -196,6 +196,11 @@ export class VideosContainer extends Component {
 const styles = (theme) => ({
     root: {
         margin: '0 60px'
+    },
+    [theme.breakpoints.down('sm')]: {
+        root: {
+            margin: '0 10px'
+        }
     }
 })
 

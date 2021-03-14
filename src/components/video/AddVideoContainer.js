@@ -185,5 +185,10 @@ const useStyles = makeStyles(theme => ({
         '&:hover': {
             backgroundColor: theme.palette.primary.main
         }
+    },
+    [theme.breakpoints.down('sm')]: {
+        root: {
+            padding: '0 10px'
+        }
     }
 }))

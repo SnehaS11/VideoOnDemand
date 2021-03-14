@@ -18,7 +18,7 @@ function Filters(props) {
         <div className={classes.root}>
             <div className="flex">
                 <Typography color="secondary" className={classes.heading}>Topics:</Typography>
-                <div className="flex">
+                <div className={`flex ${classes.filters}`}>
                     {topics.map(topic => (
                         <div
                             className={`${classes.tag} cursor ${isTopicSelected(topic.name) ? classes.selected : null}`}
@@ -33,7 +33,7 @@ function Filters(props) {
             <br />
             <div className="flex">
                 <Typography color="secondary" className={classes.heading}>Speakers:</Typography>
-                <div className="flex">
+                <div className={`flex ${classes.filters}`}>
                     {speakers.map(speaker => (
                         <div
                             className={`${classes.tag} cursor ${isSpeakerSelected(speaker._id) ? classes.selected : null}`}
@@ -73,6 +73,14 @@ const useStyles = makeStyles(theme => ({
     selected: {
         background: theme.palette.primary.main,
         color: 'white'
+    },
+    filters: {
+        flexWrap: 'wrap'
+    },
+    [theme.breakpoints.down('sm')]: {
+        root: {
+            margin: '0 10px'
+        }
     }
 }))
 
