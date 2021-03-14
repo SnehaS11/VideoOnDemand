@@ -1,0 +1,4 @@
+{
+    "mongoURI": "mongodb+srv://sneha123:digitaljalebi@videoondemand.fvbnz.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+    "jwtSecret": "mysecretkey"
+}
