@@ -17,6 +17,9 @@ const theme = createMuiTheme({
         color: 'white'
       }
     }
+  },
+  typography: {
+    fontFamily: ['Montserrat', 'sans-serif'].join(',')
   }
 });
 

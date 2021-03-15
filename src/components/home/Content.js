@@ -52,8 +52,8 @@ const useStyles = makeStyles((theme) => ({
         color: 'white'
     },
     leftText: {
-        fontSize: 22,
-        fontWeight: 'bold',
+        fontSize: 26,
+        fontWeight: 'bolder',
         width: 350
     },
     button: {
@@ -67,9 +67,11 @@ const useStyles = makeStyles((theme) => ({
     },
     rightText: {
         width: 170,
-        fontSize: 18,
+        fontSize: 22,
         color: theme.palette.primary.main,
-        fontWeight: 'bold'
+        fontWeight: 'bolder',
+        position: 'relative',
+        right: 20
     },
     rectangle: {
         transform: 'scale(0.8)'
@@ -84,20 +86,28 @@ const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.down('sm')]: {
         root: {
-            width: '100%'
+            width: '100%',
+            marginTop: 20,
+            flexDirection: 'column-reverse'
         },
         left: {
-            alignItems: 'center'
+            alignItems: 'center',
+            justifyContent: 'flex-start',
+            top: -100,
+            position: 'relative',
+            textAlign: 'center'
+        },
+        leftText: {
+            fontSize: 22
         },
         rightText: {
-            width: 'fit-content'
+            width: 'fit-content',
+            position: 'relative',
+            right: 50,
+            marginRight: 10
         },
         rectangle: {
             transform: 'scale(0.6)'
-        },
-        rightText: {
-            position: 'relative',
-            right: 50
         }
     }
 }))
