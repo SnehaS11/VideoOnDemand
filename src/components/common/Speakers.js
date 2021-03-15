@@ -3,7 +3,7 @@ import { toBase64 } from '../../Utils'
 
 function Speakers({ speakers }) {
     return (
-        <div>
+        <div style={{marginTop: 15}}>
             {speakers.length > 0 && <b style={{ margin: 2, fontSize: 12 }}>SPEAKERS</b>}
 
             <div className="flex">

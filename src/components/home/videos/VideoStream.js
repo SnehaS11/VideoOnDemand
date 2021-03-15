@@ -46,7 +46,7 @@ function VideoStream(props) {
                             Topic: {video.tags[0]}
                         </div>
 
-                        <Typography color="secondary" variant="caption">{video.desc}</Typography>
+                        <Typography color="secondary" variant="caption">{video.desc}</Typography><br/>
                         <Speakers
                             speakers={video.speakers}
                         />
@@ -87,7 +87,8 @@ const useStyles = makeStyles((theme) => ({
         padding: 3,
         color: theme.palette.primary.dark,
         width: 'fit-content',
-        fontSize: 14
+        fontSize: 14,
+        margin: '8px 0'
     }
 }))
 

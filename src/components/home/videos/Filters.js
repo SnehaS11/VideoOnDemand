@@ -59,7 +59,7 @@ const useStyles = makeStyles(theme => ({
         justifyContent: 'space-between'
     },
     tag: {
-        padding: 5,
+        padding: '5px 15px',
         border: `1px solid ${theme.palette.secondary.main}`,
         color: theme.palette.secondary.main,
         borderRadius: 10,

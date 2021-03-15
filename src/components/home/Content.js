@@ -53,8 +53,9 @@ const useStyles = makeStyles((theme) => ({
     },
     leftText: {
         fontSize: 26,
-        fontWeight: 'bolder',
-        width: 350
+        fontWeight: 'bold',
+        width: 350,
+        textShadow: '0 0 black'
     },
     button: {
         marginTop: 10,
@@ -71,7 +72,8 @@ const useStyles = makeStyles((theme) => ({
         color: theme.palette.primary.main,
         fontWeight: 'bolder',
         position: 'relative',
-        right: 20
+        right: 20,
+        textShadow: '0 0 black'
     },
     rectangle: {
         transform: 'scale(0.8)'

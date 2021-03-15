@@ -49,12 +49,15 @@ function VideoShowcase(props) {
 
 const useStyles = makeStyles(theme => ({
     paper: {
-        padding: 30,
+        padding: 20,
     },
     image: {
         width: 300,
         height: 150,
         border: theme.palette.secondary.light
+    },
+    title: {
+        textAlign: 'center'
     }
 }))
 
